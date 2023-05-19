@@ -96,7 +96,7 @@ def create_spend_chart(categories = [Category]):
         percentages.append((expense/sum(expenses)) * 100)
 
     output: str = "Percentage spent by category\n"
-    print(len(output))
+    
     for i in range(11):
         quantity = 100 - i*10
         printed_quantity = str(quantity) + "|"
@@ -113,9 +113,9 @@ def create_spend_chart(categories = [Category]):
             else:
                 output += "   "
         output += " \n"
-        print(len(output))
+        
     output += "    " + len(categories) * "---" + "-\n"
-    print(len(output))
+    
     for i in range(biggest_len):
         output += "    "
 
